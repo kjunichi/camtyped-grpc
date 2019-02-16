@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package camtype;
+
+message Request {
+}
+
+message Response {
+    bytes ppm = 1;
+}
+
+service Camtype {
+    rpc Camtype (Request) returns (stream Response) {}
+}
